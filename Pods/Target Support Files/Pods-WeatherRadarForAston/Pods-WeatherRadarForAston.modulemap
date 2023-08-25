@@ -1,0 +1,6 @@
+framework module Pods_WeatherRadarForAston {
+  umbrella header "Pods-WeatherRadarForAston-umbrella.h"
+
+  export *
+  module * { export * }
+}
