@@ -8,25 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		3FD3D7C92A56FF9B99BD4B03 /* Pods_WeatherRadarForAston.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4A3B42BEA21ECD69BBC07C /* Pods_WeatherRadarForAston.framework */; };
+		B7268F682A9A39A100D8DE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F672A9A39A100D8DE18 /* ViewController.swift */; };
+		B7268F6A2A9A3A7C00D8DE18 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F692A9A3A7C00D8DE18 /* ViewModel.swift */; };
 		B7B622FB2A98E9A10036E44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FA2A98E9A10036E44B /* AppDelegate.swift */; };
-		B7B622FD2A98E9A10036E44B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FC2A98E9A10036E44B /* SceneDelegate.swift */; };
-		B7B622FF2A98E9A10036E44B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FE2A98E9A10036E44B /* ViewController.swift */; };
+		B7B622FF2A98E9A10036E44B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FE2A98E9A10036E44B /* LoginViewController.swift */; };
 		B7B623022A98E9A10036E44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B623002A98E9A10036E44B /* Main.storyboard */; };
 		B7B623042A98E9A30036E44B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B623032A98E9A30036E44B /* Assets.xcassets */; };
 		B7B623072A98E9A30036E44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B623052A98E9A30036E44B /* LaunchScreen.storyboard */; };
+		B7B623172A98F7D70036E44B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623162A98F7D70036E44B /* User.swift */; };
+		B7B623192A98F8600036E44B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623182A98F8600036E44B /* LoginViewModel.swift */; };
+		B7B6231C2A98F9100036E44B /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6231B2A98F9100036E44B /* Dynamic.swift */; };
+		B7B623212A9A11410036E44B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623202A9A11410036E44B /* Coordinator.swift */; };
+		B7B623232A9A11DC0036E44B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623222A9A11DC0036E44B /* AppCoordinator.swift */; };
+		B7B623262A9A13300036E44B /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623252A9A13300036E44B /* Storyboardable.swift */; };
+		B7B623282A9A29F80036E44B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623272A9A29F80036E44B /* RegisterViewModel.swift */; };
+		B7B6232A2A9A2A3B0036E44B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623292A9A2A3B0036E44B /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D7A314F413487646C49B5AA /* Pods-WeatherRadarForAston.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherRadarForAston.debug.xcconfig"; path = "Target Support Files/Pods-WeatherRadarForAston/Pods-WeatherRadarForAston.debug.xcconfig"; sourceTree = "<group>"; };
 		A7D88E5C8EFDDCEDF84BF096 /* Pods-WeatherRadarForAston.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherRadarForAston.release.xcconfig"; path = "Target Support Files/Pods-WeatherRadarForAston/Pods-WeatherRadarForAston.release.xcconfig"; sourceTree = "<group>"; };
+		B7268F672A9A39A100D8DE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7268F692A9A3A7C00D8DE18 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B7B622F72A98E9A10036E44B /* WeatherRadarForAston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherRadarForAston.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B622FA2A98E9A10036E44B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7B622FC2A98E9A10036E44B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7B622FE2A98E9A10036E44B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7B622FE2A98E9A10036E44B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B7B623012A98E9A10036E44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7B623032A98E9A30036E44B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7B623062A98E9A30036E44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7B623082A98E9A30036E44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7B623162A98F7D70036E44B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7B623182A98F8600036E44B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B7B6231B2A98F9100036E44B /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		B7B623202A9A11410036E44B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B7B623222A9A11DC0036E44B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B7B623252A9A13300036E44B /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		B7B623272A9A29F80036E44B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		B7B623292A9A2A3B0036E44B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BA4A3B42BEA21ECD69BBC07C /* Pods_WeatherRadarForAston.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherRadarForAston.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,15 +89,104 @@
 		B7B622F92A98E9A10036E44B /* WeatherRadarForAston */ = {
 			isa = PBXGroup;
 			children = (
+				B7B6231E2A9A11150036E44B /* Coordinators */,
+				B7B623102A98F72D0036E44B /* ViewModels */,
+				B7B623122A98F73D0036E44B /* Models */,
+				B7B623112A98F7350036E44B /* Views */,
+				B7B623152A98F7750036E44B /* Resources */,
 				B7B622FA2A98E9A10036E44B /* AppDelegate.swift */,
-				B7B622FC2A98E9A10036E44B /* SceneDelegate.swift */,
-				B7B622FE2A98E9A10036E44B /* ViewController.swift */,
-				B7B623002A98E9A10036E44B /* Main.storyboard */,
-				B7B623032A98E9A30036E44B /* Assets.xcassets */,
-				B7B623052A98E9A30036E44B /* LaunchScreen.storyboard */,
 				B7B623082A98E9A30036E44B /* Info.plist */,
 			);
 			path = WeatherRadarForAston;
+			sourceTree = "<group>";
+		};
+		B7B623102A98F72D0036E44B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B7B6231A2A98F8FC0036E44B /* Bindings */,
+				B7B623182A98F8600036E44B /* LoginViewModel.swift */,
+				B7B623272A9A29F80036E44B /* RegisterViewModel.swift */,
+				B7268F692A9A3A7C00D8DE18 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B7B623112A98F7350036E44B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7B623242A9A13130036E44B /* Protocols */,
+				B7B6231D2A9A0D6D0036E44B /* ViewControllers */,
+				B7B623132A98F7470036E44B /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7B623122A98F73D0036E44B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7B623162A98F7D70036E44B /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7B623132A98F7470036E44B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B7B623052A98E9A30036E44B /* LaunchScreen.storyboard */,
+				B7B623002A98E9A10036E44B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B7B623152A98F7750036E44B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B7B623032A98E9A30036E44B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B7B6231A2A98F8FC0036E44B /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				B7B6231B2A98F9100036E44B /* Dynamic.swift */,
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
+		B7B6231D2A9A0D6D0036E44B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7B622FE2A98E9A10036E44B /* LoginViewController.swift */,
+				B7B623292A9A2A3B0036E44B /* RegisterViewController.swift */,
+				B7268F672A9A39A100D8DE18 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B7B6231E2A9A11150036E44B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B7B6231F2A9A112B0036E44B /* Protocols */,
+				B7B623222A9A11DC0036E44B /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B7B6231F2A9A112B0036E44B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B7B623202A9A11410036E44B /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B7B623242A9A13130036E44B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B7B623252A9A13300036E44B /* Storyboardable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		EF7854CE1D43FF98CAEAAA08 /* Pods */ = {
@@ -88,7 +195,6 @@
 				1D7A314F413487646C49B5AA /* Pods-WeatherRadarForAston.debug.xcconfig */,
 				A7D88E5C8EFDDCEDF84BF096 /* Pods-WeatherRadarForAston.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -189,9 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7B622FF2A98E9A10036E44B /* ViewController.swift in Sources */,
+				B7B622FF2A98E9A10036E44B /* LoginViewController.swift in Sources */,
+				B7B6232A2A9A2A3B0036E44B /* RegisterViewController.swift in Sources */,
 				B7B622FB2A98E9A10036E44B /* AppDelegate.swift in Sources */,
-				B7B622FD2A98E9A10036E44B /* SceneDelegate.swift in Sources */,
+				B7B623212A9A11410036E44B /* Coordinator.swift in Sources */,
+				B7268F682A9A39A100D8DE18 /* ViewController.swift in Sources */,
+				B7B6231C2A98F9100036E44B /* Dynamic.swift in Sources */,
+				B7B623262A9A13300036E44B /* Storyboardable.swift in Sources */,
+				B7B623172A98F7D70036E44B /* User.swift in Sources */,
+				B7B623192A98F8600036E44B /* LoginViewModel.swift in Sources */,
+				B7B623282A9A29F80036E44B /* RegisterViewModel.swift in Sources */,
+				B7268F6A2A9A3A7C00D8DE18 /* ViewModel.swift in Sources */,
+				B7B623232A9A11DC0036E44B /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +459,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -376,6 +492,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
