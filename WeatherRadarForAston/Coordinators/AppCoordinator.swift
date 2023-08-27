@@ -21,7 +21,13 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        goToLoginPage()
+        let defaults = UserDefaults.standard
+        let isloggedIn = defaults.bool(forKey: "isLoggedIn")
+        if isloggedIn {
+            goToMainPage()
+        } else {
+            goToLoginPage()
+        }
     }
     
     func goToLoginPage(){
@@ -41,9 +47,9 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(registerViewController, animated: true)
     }
     
-    func goToViewController(){
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        let viewModel = ViewModel()
+    func goToMainPage(){
+        let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        let viewModel = MainViewModel()
         viewModel.appCoordinator = self
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)

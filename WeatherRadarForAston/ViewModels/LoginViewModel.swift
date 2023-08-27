@@ -13,16 +13,18 @@ class LoginViewModel {
     
     var statusText = Dynamic(value: "")
     
+    let locationService = LocationServise()
+    let offerModel = CurrentWeatherOfferModel()
+    
     func loginButtonPressed(login: String, password: String) {
-        
-        if login != User.logins[0].login || password != User.logins[0].password {
-            statusText.value = "Login failed"
-        } else {
-            statusText.value = "Logged in!"
-        }
+        appCoordinator?.goToMainPage()
     }
     
     func registerButtonPressed(){
         appCoordinator?.goToRegisterPage()
+    }
+    
+    func addLocation() {
+        locationService.updateWeatherInfo(latitude: CitiesEnum.moskow.coord.lat, longtitude: CitiesEnum.moskow.coord.lon)
     }
 }

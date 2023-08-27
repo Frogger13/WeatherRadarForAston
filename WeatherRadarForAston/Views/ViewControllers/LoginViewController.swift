@@ -34,6 +34,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginTextField.delegate = self
         passwordTextField.delegate = self
         
+        viewModel.addLocation()
+        
         bindViewModel()
     }
     

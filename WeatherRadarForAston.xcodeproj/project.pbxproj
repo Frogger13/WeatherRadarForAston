@@ -8,8 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3FD3D7C92A56FF9B99BD4B03 /* Pods_WeatherRadarForAston.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4A3B42BEA21ECD69BBC07C /* Pods_WeatherRadarForAston.framework */; };
-		B7268F682A9A39A100D8DE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F672A9A39A100D8DE18 /* ViewController.swift */; };
-		B7268F6A2A9A3A7C00D8DE18 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F692A9A3A7C00D8DE18 /* ViewModel.swift */; };
+		B7268F682A9A39A100D8DE18 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F672A9A39A100D8DE18 /* MainViewController.swift */; };
+		B7268F6A2A9A3A7C00D8DE18 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F692A9A3A7C00D8DE18 /* MainViewModel.swift */; };
+		B7268F932A9B543C00D8DE18 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F922A9B543C00D8DE18 /* OfferModel.swift */; };
+		B7268F962A9B5C1400D8DE18 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F952A9B5C1400D8DE18 /* DefaultsKeys.swift */; };
+		B7268F982A9B62A200D8DE18 /* LocationServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F972A9B62A200D8DE18 /* LocationServise.swift */; };
+		B7268F9B2A9B65F200D8DE18 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F9A2A9B65F200D8DE18 /* WeatherModel.swift */; };
+		B7268F9D2A9B66FE00D8DE18 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268F9C2A9B66FE00D8DE18 /* MainModel.swift */; };
+		B7268FA12A9BB83E00D8DE18 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FA02A9BB83E00D8DE18 /* CityModel.swift */; };
+		B7268FA42A9BC73600D8DE18 /* FiveDaysOfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FA32A9BC73600D8DE18 /* FiveDaysOfferModel.swift */; };
+		B7268FA62A9BC79800D8DE18 /* ForecatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FA52A9BC79800D8DE18 /* ForecatModel.swift */; };
+		B7268FAA2A9BE9E800D8DE18 /* CityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FA92A9BE9E800D8DE18 /* CityDataModel.swift */; };
+		B7268FAC2A9BECE000D8DE18 /* CitiesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FAB2A9BECE000D8DE18 /* CitiesEnum.swift */; };
+		B7268FAE2A9BED1000D8DE18 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FAD2A9BED1000D8DE18 /* Coordinate.swift */; };
+		B7268FB12A9BF88700D8DE18 /* CustomHourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7268FB02A9BF88700D8DE18 /* CustomHourCell.xib */; };
 		B7B622FB2A98E9A10036E44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FA2A98E9A10036E44B /* AppDelegate.swift */; };
 		B7B622FF2A98E9A10036E44B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FE2A98E9A10036E44B /* LoginViewController.swift */; };
 		B7B623022A98E9A10036E44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B623002A98E9A10036E44B /* Main.storyboard */; };
@@ -28,8 +40,20 @@
 /* Begin PBXFileReference section */
 		1D7A314F413487646C49B5AA /* Pods-WeatherRadarForAston.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherRadarForAston.debug.xcconfig"; path = "Target Support Files/Pods-WeatherRadarForAston/Pods-WeatherRadarForAston.debug.xcconfig"; sourceTree = "<group>"; };
 		A7D88E5C8EFDDCEDF84BF096 /* Pods-WeatherRadarForAston.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherRadarForAston.release.xcconfig"; path = "Target Support Files/Pods-WeatherRadarForAston/Pods-WeatherRadarForAston.release.xcconfig"; sourceTree = "<group>"; };
-		B7268F672A9A39A100D8DE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B7268F692A9A3A7C00D8DE18 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B7268F672A9A39A100D8DE18 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B7268F692A9A3A7C00D8DE18 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B7268F922A9B543C00D8DE18 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
+		B7268F952A9B5C1400D8DE18 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
+		B7268F972A9B62A200D8DE18 /* LocationServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServise.swift; sourceTree = "<group>"; };
+		B7268F9A2A9B65F200D8DE18 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		B7268F9C2A9B66FE00D8DE18 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		B7268FA02A9BB83E00D8DE18 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		B7268FA32A9BC73600D8DE18 /* FiveDaysOfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysOfferModel.swift; sourceTree = "<group>"; };
+		B7268FA52A9BC79800D8DE18 /* ForecatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecatModel.swift; sourceTree = "<group>"; };
+		B7268FA92A9BE9E800D8DE18 /* CityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataModel.swift; sourceTree = "<group>"; };
+		B7268FAB2A9BECE000D8DE18 /* CitiesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesEnum.swift; sourceTree = "<group>"; };
+		B7268FAD2A9BED1000D8DE18 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		B7268FB02A9BF88700D8DE18 /* CustomHourCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHourCell.xib; sourceTree = "<group>"; };
 		B7B622F72A98E9A10036E44B /* WeatherRadarForAston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherRadarForAston.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B622FA2A98E9A10036E44B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7B622FE2A98E9A10036E44B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +92,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B7268F912A9B538600D8DE18 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7268F972A9B62A200D8DE18 /* LocationServise.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		B7268F942A9B5BFC00D8DE18 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B7268F952A9B5C1400D8DE18 /* DefaultsKeys.swift */,
+				B7268FAB2A9BECE000D8DE18 /* CitiesEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B7268F992A9B65AC00D8DE18 /* OfferModels */ = {
+			isa = PBXGroup;
+			children = (
+				B7268F922A9B543C00D8DE18 /* OfferModel.swift */,
+				B7268FA32A9BC73600D8DE18 /* FiveDaysOfferModel.swift */,
+				B7268FA52A9BC79800D8DE18 /* ForecatModel.swift */,
+				B7268F9A2A9B65F200D8DE18 /* WeatherModel.swift */,
+				B7268F9C2A9B66FE00D8DE18 /* MainModel.swift */,
+				B7268FA92A9BE9E800D8DE18 /* CityDataModel.swift */,
+				B7268FA02A9BB83E00D8DE18 /* CityModel.swift */,
+				B7268FAD2A9BED1000D8DE18 /* Coordinate.swift */,
+			);
+			path = OfferModels;
+			sourceTree = "<group>";
+		};
+		B7268FA22A9BC70700D8DE18 /* FiveDaysModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FiveDaysModel;
+			sourceTree = "<group>";
+		};
+		B7268FAF2A9BF85B00D8DE18 /* CustomXibs */ = {
+			isa = PBXGroup;
+			children = (
+				B7268FB02A9BF88700D8DE18 /* CustomHourCell.xib */,
+			);
+			path = CustomXibs;
+			sourceTree = "<group>";
+		};
 		B7B622EE2A98E9A10036E44B = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +160,7 @@
 		B7B622F92A98E9A10036E44B /* WeatherRadarForAston */ = {
 			isa = PBXGroup;
 			children = (
+				B7268F912A9B538600D8DE18 /* NetworkManager */,
 				B7B6231E2A9A11150036E44B /* Coordinators */,
 				B7B623102A98F72D0036E44B /* ViewModels */,
 				B7B623122A98F73D0036E44B /* Models */,
@@ -106,7 +178,7 @@
 				B7B6231A2A98F8FC0036E44B /* Bindings */,
 				B7B623182A98F8600036E44B /* LoginViewModel.swift */,
 				B7B623272A9A29F80036E44B /* RegisterViewModel.swift */,
-				B7268F692A9A3A7C00D8DE18 /* ViewModel.swift */,
+				B7268F692A9A3A7C00D8DE18 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +196,9 @@
 		B7B623122A98F73D0036E44B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B7268FA22A9BC70700D8DE18 /* FiveDaysModel */,
+				B7268F992A9B65AC00D8DE18 /* OfferModels */,
+				B7268F942A9B5BFC00D8DE18 /* Enums */,
 				B7B623162A98F7D70036E44B /* User.swift */,
 			);
 			path = Models;
@@ -132,6 +207,7 @@
 		B7B623132A98F7470036E44B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B7268FAF2A9BF85B00D8DE18 /* CustomXibs */,
 				B7B623052A98E9A30036E44B /* LaunchScreen.storyboard */,
 				B7B623002A98E9A10036E44B /* Main.storyboard */,
 			);
@@ -159,7 +235,7 @@
 			children = (
 				B7B622FE2A98E9A10036E44B /* LoginViewController.swift */,
 				B7B623292A9A2A3B0036E44B /* RegisterViewController.swift */,
-				B7268F672A9A39A100D8DE18 /* ViewController.swift */,
+				B7268F672A9A39A100D8DE18 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -257,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7268FB12A9BF88700D8DE18 /* CustomHourCell.xib in Resources */,
 				B7B623072A98E9A30036E44B /* LaunchScreen.storyboard in Resources */,
 				B7B623042A98E9A30036E44B /* Assets.xcassets in Resources */,
 				B7B623022A98E9A10036E44B /* Main.storyboard in Resources */,
@@ -297,15 +374,26 @@
 			files = (
 				B7B622FF2A98E9A10036E44B /* LoginViewController.swift in Sources */,
 				B7B6232A2A9A2A3B0036E44B /* RegisterViewController.swift in Sources */,
+				B7268FA62A9BC79800D8DE18 /* ForecatModel.swift in Sources */,
 				B7B622FB2A98E9A10036E44B /* AppDelegate.swift in Sources */,
+				B7268FAE2A9BED1000D8DE18 /* Coordinate.swift in Sources */,
 				B7B623212A9A11410036E44B /* Coordinator.swift in Sources */,
-				B7268F682A9A39A100D8DE18 /* ViewController.swift in Sources */,
+				B7268F932A9B543C00D8DE18 /* OfferModel.swift in Sources */,
+				B7268F682A9A39A100D8DE18 /* MainViewController.swift in Sources */,
+				B7268FA12A9BB83E00D8DE18 /* CityModel.swift in Sources */,
 				B7B6231C2A98F9100036E44B /* Dynamic.swift in Sources */,
 				B7B623262A9A13300036E44B /* Storyboardable.swift in Sources */,
 				B7B623172A98F7D70036E44B /* User.swift in Sources */,
+				B7268FAC2A9BECE000D8DE18 /* CitiesEnum.swift in Sources */,
 				B7B623192A98F8600036E44B /* LoginViewModel.swift in Sources */,
 				B7B623282A9A29F80036E44B /* RegisterViewModel.swift in Sources */,
-				B7268F6A2A9A3A7C00D8DE18 /* ViewModel.swift in Sources */,
+				B7268F962A9B5C1400D8DE18 /* DefaultsKeys.swift in Sources */,
+				B7268FAA2A9BE9E800D8DE18 /* CityDataModel.swift in Sources */,
+				B7268F982A9B62A200D8DE18 /* LocationServise.swift in Sources */,
+				B7268F6A2A9A3A7C00D8DE18 /* MainViewModel.swift in Sources */,
+				B7268F9D2A9B66FE00D8DE18 /* MainModel.swift in Sources */,
+				B7268F9B2A9B65F200D8DE18 /* WeatherModel.swift in Sources */,
+				B7268FA42A9BC73600D8DE18 /* FiveDaysOfferModel.swift in Sources */,
 				B7B623232A9A11DC0036E44B /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
