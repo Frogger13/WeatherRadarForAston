@@ -12,6 +12,8 @@ final class LocationServise: NSObject {
     
     let locationManager = CLLocationManager()
     
+    let defaultsmanager = DefaultsManager()
+    
     var currentWeatherData: CurrentWeatherOfferModel?
     var forecastWeather: FiveDaysOfferModel?
     
@@ -19,7 +21,7 @@ final class LocationServise: NSObject {
         super.init()
         
         locationManager.requestWhenInUseAuthorization()
-        locationManager.delegate = self
+//        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLLocationAccuracyHundredMeters
         locationManager.pausesLocationUpdatesAutomatically = false
@@ -27,15 +29,16 @@ final class LocationServise: NSObject {
     }
     
     
-    func updateWeatherInfo(latitude: Double, longtitude: Double) {
+    func updateWeatherInfo(coordiante: Coordinate) {
         
         let session = URLSession.shared
-        let currentWeatherURL = URL(string:"https://api.openweathermap.org/data/2.5/weather?lat=\(latitude.description)&lon=\(longtitude.description)&appid=862659b89e523562a17604c35c5b18b0&lang=ru&units=metric")!
-        let fiveDaysWeatherURL = URL(string:"https://api.openweathermap.org/data/2.5/forecast?lat=\(latitude.description)&lon=\(longtitude.description)&appid=862659b89e523562a17604c35c5b18b0&lang=ru&units=metric")!
+        let currentWeatherURL = URL(string:"https://api.openweathermap.org/data/2.5/weather?lat=\(coordiante.lat.description)&lon=\(coordiante.lon.description)&appid=862659b89e523562a17604c35c5b18b0&lang=ru&units=metric")!
+        let fiveDaysWeatherURL = URL(string:"https://api.openweathermap.org/data/2.5/forecast?lat=\(coordiante.lat.description)&lon=\(coordiante.lon.description)&appid=862659b89e523562a17604c35c5b18b0&lang=ru&units=metric")!
         
         taskCreate(url: currentWeatherURL, session: session, isCurrentWeather: true)
         taskCreate(url: fiveDaysWeatherURL, session: session, isCurrentWeather: false)
     }
+    
     
     func taskCreate(url: URL, session: URLSession, isCurrentWeather :Bool) {
         
@@ -47,8 +50,10 @@ final class LocationServise: NSObject {
             do {
                 if isCurrentWeather{
                     self.currentWeatherData = try JSONDecoder().decode(CurrentWeatherOfferModel.self, from: data!)
+                    self.defaultsmanager.setCurrentWeatherData(currentWeatherOfferData: data!)
                 } else {
                     self.forecastWeather = try JSONDecoder().decode(FiveDaysOfferModel.self, from: data!)
+                    self.defaultsmanager.setForecastWeather(forecastWeatherData: data!)
                 }
             } catch {
                 print("Error: \(error.localizedDescription)")
@@ -61,7 +66,7 @@ final class LocationServise: NSObject {
 extension LocationServise: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let lastLocation = locations.last {
-            updateWeatherInfo(latitude: lastLocation.coordinate.latitude, longtitude: lastLocation.coordinate.longitude)
+            defaultsmanager.setCurrentLoacation(lat: lastLocation.coordinate.latitude, lon: lastLocation.coordinate.longitude)
         }
     }
 }

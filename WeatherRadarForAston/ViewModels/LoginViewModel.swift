@@ -11,6 +11,8 @@ class LoginViewModel {
     
     weak var appCoordinator: AppCoordinator?
     
+    let defaultsmanager = DefaultsManager()
+    
     var statusText = Dynamic(value: "")
     
     let locationService = LocationServise()
@@ -25,6 +27,18 @@ class LoginViewModel {
     }
     
     func addLocation() {
-        locationService.updateWeatherInfo(latitude: CitiesEnum.moskow.coord.lat, longtitude: CitiesEnum.moskow.coord.lon)
+        locationService.updateWeatherInfo(coordiante: CitiesEnum.moskow.coord)
+    }
+    
+    func setupDefaultAppSettings() {
+        let citiesArray = [
+            CityModel(name: "Текущее местоположение", coord: defaultsmanager.getCurrentLoacation()),
+            CityModel(name: "Москва", coord: Coordinate(latitude: 55.7540471, longtitude: 37.620405)),
+            CityModel(name: "Санкт-Петербург", coord: Coordinate(latitude: 59.9391313, longtitude: 30.3159004)),
+            CityModel(name: "Казань", coord: Coordinate(latitude: 55.7943584, longtitude: 49.1114975))
+        ]
+        defaultsmanager.setCitiesArray(citiesArray: citiesArray)
+        
+        defaultsmanager.setCurrentCity(cityString: defaultsmanager.getCurrentCity().name)
     }
 }

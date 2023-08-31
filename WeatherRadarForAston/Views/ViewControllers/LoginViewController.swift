@@ -31,21 +31,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.setupDefaultAppSettings()
+        
         loginTextField.delegate = self
         passwordTextField.delegate = self
         
         viewModel.addLocation()
-        
-        bindViewModel()
     }
     
-    func bindViewModel(){
-        viewModel.statusText.bind(listener: { (statusText) in
-            DispatchQueue.main.async {
-                self.statusTextLabel.text = statusText
-            }
-        })
-    }
     
     //MARK: - UITextFiewldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -6,5 +6,6 @@ target 'WeatherRadarForAston' do
   use_frameworks!
 
   # Pods for WeatherRadarForAston
-
+  pod 'Kingfisher', '~> 7.9'
+  
 end
