@@ -65,8 +65,11 @@ final class LocationServise: NSObject {
 
 extension LocationServise: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let lock = NSLock()
+        lock.lock()
         if let lastLocation = locations.last {
             defaultsmanager.setCurrentLoacation(lat: lastLocation.coordinate.latitude, lon: lastLocation.coordinate.longitude)
         }
+        lock.unlock()
     }
 }

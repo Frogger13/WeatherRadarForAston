@@ -7,7 +7,9 @@
 
 import UIKit
 
-class CustomForecatView: UIView {
+class CustomForecatViewCell: UICollectionViewCell {
+    
+    let viewModel = MainViewModel()
     
     private lazy var timeLabel: UILabel = {
         let timeLabel = UILabel()
@@ -29,29 +31,37 @@ class CustomForecatView: UIView {
         return tempLabel
     }()
 
-    static func instatceFromNib() -> CustomForecatView{
-        let nib = UINib(nibName: "\(Self.self)", bundle: nil).instantiate(withOwner: nil).first as? CustomForecatView ?? CustomForecatView()
-        nib.setupUI()
-        return nib
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setupUI() {
         self.addSubview(timeLabel)
         self.addSubview(weatherImageView)
         self.addSubview(tempLabel)
-        
         setlayouts()
     }
     
-    func setInfo(time: String, image: String, temp: String) {
-        self.timeLabel.text = time
-        self.weatherImageView.image = UIImage()
-        self.tempLabel.text = temp
+    func setInfo(time: TimeInterval, imageName: String, temp: Double) {
+        
+        let currentDate = Date(timeIntervalSince1970: time)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        self.timeLabel.text = dateFormatter.string(from: currentDate)
+        DispatchQueue.main.async {
+            self.viewModel.setImageIntoView(imageView: self.weatherImageView, imageName: imageName)
+        }
+        self.tempLabel.text = Int(temp).description + "°"
     }
 
 }
 
-extension CustomForecatView {
+extension CustomForecatViewCell {
     func setlayouts() {
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
         weatherImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -63,20 +73,20 @@ extension CustomForecatView {
             timeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             timeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             timeLabel.widthAnchor.constraint(equalToConstant: 60),
-            timeLabel.heightAnchor.constraint(equalToConstant: 40),
+            timeLabel.heightAnchor.constraint(equalToConstant: 30),
             
             weatherImageView.topAnchor.constraint(equalTo: timeLabel.bottomAnchor),
             weatherImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             weatherImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             weatherImageView.widthAnchor.constraint(equalToConstant: 60),
-            weatherImageView.heightAnchor.constraint(equalToConstant: 40),
+            weatherImageView.heightAnchor.constraint(equalToConstant: 60),
             
             tempLabel.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor),
             tempLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tempLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tempLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             tempLabel.widthAnchor.constraint(equalToConstant: 60),
-            tempLabel.heightAnchor.constraint(equalToConstant: 40)
+            tempLabel.heightAnchor.constraint(equalToConstant: 30)
             
         ])
     }

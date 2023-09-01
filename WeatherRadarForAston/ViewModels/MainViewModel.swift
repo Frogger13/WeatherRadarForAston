@@ -40,19 +40,21 @@ class MainViewModel {
         return citiesStringArray
     }
     
-    func setImage(imageView: UIImageView) {
-        if let imageName = defaultsManager.getCurrentWeatherData().weather.first?.icon{
-            let url = URL(string: "https://openweathermap.org/img/wn/\(imageName)@2x.png")
-            let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
-            imageView.kf.setImage(
-                with: url,
-                placeholder: UIImage(named: "placeholderImage"),
-                options: [
-                    .processor(processor),
-                    .scaleFactor(UIScreen.main.scale),
-                    .transition(.fade(1)),
-                    .cacheOriginalImage
-                ])
-        }
+    func setImageIntoView(imageView: UIImageView, imageName: String?) {
+        let url = URL(string: "https://openweathermap.org/img/wn/\(imageName ?? "")@2x.png")
+        let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
+        imageView.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "placeholderImage"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .cacheOriginalImage
+            ])
+        
+    }
+    
+    func getForecat(row: Int) ->  ForecastModel{
+        return defaultsManager.getForecastWeather().list[row]
     }
 }

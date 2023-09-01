@@ -8,8 +8,7 @@
 import Foundation
 
 struct ForecastModel: Codable {
-    var dt: Int = 0
+    var dt: TimeInterval = 0
     var main: MainModel = MainModel()
     var weather: [WeatherModel] = []
-    var dt_txt: String = ""
 }

@@ -22,7 +22,7 @@
 		B7268FAE2A9BED1000D8DE18 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FAD2A9BED1000D8DE18 /* Coordinate.swift */; };
 		B7268FB42A9CAAEC00D8DE18 /* MainViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FB32A9CAAEC00D8DE18 /* MainViewConstraints.swift */; };
 		B7268FB62A9CCAD200D8DE18 /* CustomForecatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7268FB52A9CCAD200D8DE18 /* CustomForecatView.xib */; };
-		B7268FB92A9CCB2F00D8DE18 /* CustomForecatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FB82A9CCB2F00D8DE18 /* CustomForecatView.swift */; };
+		B7268FB92A9CCB2F00D8DE18 /* CustomForecatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FB82A9CCB2F00D8DE18 /* CustomForecatViewCell.swift */; };
 		B7268FDB2A9CD28600D8DE18 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FDA2A9CD28600D8DE18 /* AppConstants.swift */; };
 		B7268FE32A9F4EF600D8DE18 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FE22A9F4EF600D8DE18 /* DefaultsManager.swift */; };
 		B7B622FB2A98E9A10036E44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FA2A98E9A10036E44B /* AppDelegate.swift */; };
@@ -57,7 +57,7 @@
 		B7268FAD2A9BED1000D8DE18 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		B7268FB32A9CAAEC00D8DE18 /* MainViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewConstraints.swift; sourceTree = "<group>"; };
 		B7268FB52A9CCAD200D8DE18 /* CustomForecatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomForecatView.xib; sourceTree = "<group>"; };
-		B7268FB82A9CCB2F00D8DE18 /* CustomForecatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomForecatView.swift; sourceTree = "<group>"; };
+		B7268FB82A9CCB2F00D8DE18 /* CustomForecatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomForecatViewCell.swift; sourceTree = "<group>"; };
 		B7268FDA2A9CD28600D8DE18 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		B7268FE22A9F4EF600D8DE18 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		B7B622F72A98E9A10036E44B /* WeatherRadarForAston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherRadarForAston.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +149,7 @@
 		B7268FB72A9CCAF700D8DE18 /* CustomXibVC */ = {
 			isa = PBXGroup;
 			children = (
-				B7268FB82A9CCB2F00D8DE18 /* CustomForecatView.swift */,
+				B7268FB82A9CCB2F00D8DE18 /* CustomForecatViewCell.swift */,
 			);
 			path = CustomXibVC;
 			sourceTree = "<group>";
@@ -419,7 +419,7 @@
 				B7B6232A2A9A2A3B0036E44B /* RegisterViewController.swift in Sources */,
 				B7268FA62A9BC79800D8DE18 /* ForecatModel.swift in Sources */,
 				B7B622FB2A98E9A10036E44B /* AppDelegate.swift in Sources */,
-				B7268FB92A9CCB2F00D8DE18 /* CustomForecatView.swift in Sources */,
+				B7268FB92A9CCB2F00D8DE18 /* CustomForecatViewCell.swift in Sources */,
 				B7268FAE2A9BED1000D8DE18 /* Coordinate.swift in Sources */,
 				B7268FE32A9F4EF600D8DE18 /* DefaultsManager.swift in Sources */,
 				B7B623212A9A11410036E44B /* Coordinator.swift in Sources */,

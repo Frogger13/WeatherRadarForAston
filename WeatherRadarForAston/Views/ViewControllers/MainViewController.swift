@@ -28,6 +28,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize = CGSize(width: view.frame.width, height: view.frame.height + 200)
         scrollView.showsVerticalScrollIndicator = true
         scrollView.alwaysBounceVertical = true
+        scrollView.backgroundColor = .systemTeal
         return scrollView
     }()
     
@@ -52,7 +53,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     private lazy var  weatherImageView: UIImageView = {
         let weatherImageView = UIImageView()
         DispatchQueue.main.async {
-            self.viewModel.setImage(imageView: weatherImageView)
+            let imageName = self.viewModel.defaultsManager.getCurrentWeatherData().weather.first?.icon
+            self.viewModel.setImageIntoView(imageView: weatherImageView, imageName: imageName)
         }
         return weatherImageView
     }()
@@ -64,31 +66,21 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         return weatherDescriptionLabel
     }()
     
-    private lazy var dayForecatScrollView: UIScrollView = {
-        let dayForecatScrollView = UIScrollView()
-        dayForecatScrollView.contentSize = CGSize(width: 360, height: 120)
-        dayForecatScrollView.showsVerticalScrollIndicator = true
-        dayForecatScrollView.alwaysBounceVertical = true
-        return dayForecatScrollView
-    }()
-    
-    private lazy var dayForecatStackView: UIStackView = {
-       let dayForecatStackView = UIStackView()
-        dayForecatStackView.axis = .horizontal
-        dayForecatStackView.spacing = 0
-        dayForecatStackView.alignment = .center
-        dayForecatStackView.sizeToFit()
-        return dayForecatStackView
-    }()
-    
-    private lazy var dayForecatTableView: UITableView = {
-        let dayForecatTableView = UITableView()
-        return dayForecatTableView
-    }()
-    
-    private lazy var dayForecatTableViewCell: UITableViewCell = {
-        let dayForecatTableViewCell = UITableViewCell()
-        return dayForecatTableViewCell
+    private lazy var dayForecatCollectionView: UICollectionView = {
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 60, height: 120)
+            
+        
+        let dayForecatCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        dayForecatCollectionView.backgroundColor = .white
+        
+        dayForecatCollectionView.dataSource = self
+        dayForecatCollectionView.delegate = self
+        
+        dayForecatCollectionView.register(CustomForecatViewCell.self, forCellWithReuseIdentifier: "\(CustomForecatViewCell.self)")
+        return dayForecatCollectionView
     }()
     
     private lazy var weekForecatScrollView: UIScrollView = {
@@ -122,26 +114,9 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = rightBarButtonItem
-        
-        view.addGestureRecognizer(tapGestureRecognizer)
-        view.addSubview(scrollView)
-        scrollView.addSubview(cityLabel)
-        scrollView.addSubview(tempLabel)
-        scrollView.addSubview(weatherImageView)
-        scrollView.addSubview(weatherDescriptionLabel)
-        scrollView.addSubview(dayForecatScrollView)
-        dayForecatScrollView.addSubview(dayForecatStackView)
-        
-        for _ in 1...6 {
-            let view = CustomForecatView.instatceFromNib()
-            view.frame.size = CGSize(width: 60, height: 120)
-            view.backgroundColor = .systemBlue
-//            view.setupUI()
-            dayForecatStackView.addArrangedSubview(view)
-        }
-        
+        setupVIews()
         setupLayout()
+        
     }
     
     @objc
@@ -165,15 +140,36 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
 //MARK: - NSLayoutConstraint
 extension MainViewController {
+    
+    func setupVIews() {
+        
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+        
+        view.addGestureRecognizer(tapGestureRecognizer)
+        view.addSubview(scrollView)
+        scrollView.addSubview(cityLabel)
+        scrollView.addSubview(tempLabel)
+        scrollView.addSubview(weatherImageView)
+        scrollView.addSubview(weatherDescriptionLabel)
+        scrollView.addSubview(dayForecatCollectionView)
+    }
+    
     func setupLayout() {
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         cityLabel.translatesAutoresizingMaskIntoConstraints = false
         tempLabel.translatesAutoresizingMaskIntoConstraints = false
         weatherImageView.translatesAutoresizingMaskIntoConstraints = false
         weatherDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        dayForecatScrollView.translatesAutoresizingMaskIntoConstraints = false
-        dayForecatStackView.translatesAutoresizingMaskIntoConstraints = false
+        dayForecatCollectionView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
+            
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
             cityLabel.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: MainViewConstraints.safeAreaIndent),
             cityLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: MainViewConstraints.safeAreaIndent),
             cityLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -MainViewConstraints.safeAreaIndent),
@@ -187,27 +183,24 @@ extension MainViewController {
             
             weatherImageView.topAnchor.constraint(equalTo: tempLabel.bottomAnchor, constant: MainViewConstraints.standartElementsIndent),
             weatherImageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: MainViewConstraints.safeAreaIndent),
-            weatherImageView.widthAnchor.constraint(equalToConstant: 40),
-            weatherImageView.heightAnchor.constraint(equalToConstant: 40),
+            weatherImageView.widthAnchor.constraint(equalToConstant: 60),
+            weatherImageView.heightAnchor.constraint(equalToConstant: 60),
             
             weatherDescriptionLabel.topAnchor.constraint(equalTo: weatherImageView.topAnchor),
             weatherDescriptionLabel.leadingAnchor.constraint(equalTo: weatherImageView.trailingAnchor, constant: MainViewConstraints.groupedElementsIndent),
             weatherDescriptionLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -MainViewConstraints.safeAreaIndent),
             weatherDescriptionLabel.heightAnchor.constraint(equalTo: weatherImageView.heightAnchor),
-        
-            dayForecatScrollView.topAnchor.constraint(equalTo: weatherDescriptionLabel.bottomAnchor, constant: MainViewConstraints.standartElementsIndent),
-            dayForecatScrollView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: MainViewConstraints.safeAreaIndent),
-            dayForecatScrollView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -MainViewConstraints.safeAreaIndent),
             
-            dayForecatStackView.topAnchor.constraint(equalTo: dayForecatScrollView.topAnchor),
-            dayForecatStackView.leadingAnchor.constraint(equalTo: dayForecatScrollView.leadingAnchor),
-            dayForecatStackView.bottomAnchor.constraint(equalTo: dayForecatScrollView.bottomAnchor)
-            
+            dayForecatCollectionView.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor, constant: MainViewConstraints.standartElementsIndent),
+            dayForecatCollectionView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            dayForecatCollectionView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            dayForecatCollectionView.heightAnchor.constraint(equalToConstant: 130)
             
         ])
     }
     
     func setupLayoutForChangeCityView() {
+        
         changeCityPickerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -239,6 +232,31 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     
 }
+
+//MARK: - UICollectionViewDataSource
+
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        24 / AppConstants.numOfHourForecat
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = self.dayForecatCollectionView.dequeueReusableCell(withReuseIdentifier: "\(CustomForecatViewCell.self)", for: indexPath) as? CustomForecatViewCell else {
+            return UICollectionViewCell()
+        }
+        let forecatModel = viewModel.getForecat(row: indexPath.item)
+        let time = forecatModel.dt
+        let imageName = forecatModel.weather.first?.icon ?? ""
+        let temp = forecatModel.main.temp
+        
+        cell.setInfo(time: time, imageName: imageName, temp: temp)
+        return cell
+    }
+    
+    
+}
+
 //MARK: - DataBinding
 extension MainViewController {
     
@@ -252,8 +270,10 @@ extension MainViewController {
                 
                 self.cityLabel.text = currentCity.name
                 self.tempLabel.text = Int(self.viewModel.getCurrentWeather().main.temp).description + "°"
-                self.viewModel.setImage(imageView: self.weatherImageView)
+                self.viewModel.setImageIntoView(imageView: self.weatherImageView, imageName: self.viewModel.defaultsManager.getCurrentWeatherData().weather.first?.icon)
                 self.weatherDescriptionLabel.text = self.viewModel.getCurrentWeather().weather.first?.description
+                
+                self.dayForecatCollectionView.reloadData()
                 
             }
         })
