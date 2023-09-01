@@ -53,7 +53,7 @@ final class LocationServise: NSObject {
                     self.defaultsmanager.setCurrentWeatherData(currentWeatherOfferData: data!)
                 } else {
                     self.forecastWeather = try JSONDecoder().decode(FiveDaysOfferModel.self, from: data!)
-                    self.defaultsmanager.setForecastWeather(forecastWeatherData: data!)
+                    self.defaultsmanager.setForecatWeather(forecastWeatherData: data!)
                 }
             } catch {
                 print("Error: \(error.localizedDescription)")

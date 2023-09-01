@@ -19,6 +19,9 @@ class MainViewModel {
     func setNewCurrentCity(citySctring: String) {
         defaultsManager.setCurrentCity(cityString: citySctring)
     }
+    func getCurrentCityName() -> String {
+        defaultsManager.getCurrentCity().name
+    }
     
     func updateWeatherInfo(city: CityModel) {
         locationService.updateWeatherInfo(coordiante: city.coord)
@@ -29,7 +32,7 @@ class MainViewModel {
     }
     
     func getForecastWeather() -> FiveDaysOfferModel {
-        return defaultsManager.getForecastWeather()
+        return defaultsManager.getForecatWeather()
     }
     
     func getCitiesStringArray() -> [String] {
@@ -55,6 +58,7 @@ class MainViewModel {
     }
     
     func getForecat(row: Int) ->  ForecastModel{
-        return defaultsManager.getForecastWeather().list[row]
+        return defaultsManager.getForecatWeather().list[row]
     }
+    
 }

@@ -52,53 +52,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2F1EDA1A-3C44-4518-BE16-F6AB073D8584"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeatherRadarForAston/ViewModels/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "setImageIntoView(imageView:imageName:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2F1EDA1A-3C44-4518-BE16-F6AB073D8584 - f00d90152dd8b895"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WeatherRadarForAston.MainViewModel.setImage(imageView: __C.UIImageView, imageName: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "WeatherRadarForAston"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/den/Documents/Projects/Tutorials/WeatherRadarForAston/WeatherRadarForAston/ViewModels/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  uuid = "2F1EDA1A-3C44-4518-BE16-F6AB073D8584 - bdf281a2f9876e61"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WeatherRadarForAston.MainViewModel.setImageIntoView(imageView: __C.UIImageView, imageName: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "WeatherRadarForAston"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/den/Documents/Projects/Tutorials/WeatherRadarForAston/WeatherRadarForAston/ViewModels/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "216">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -34,7 +34,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     
     private lazy var cityLabel: UILabel = {
         let cityLabel = UILabel()
-        cityLabel.text = viewModel.defaultsManager.getCurrentCity().name
+        cityLabel.text = viewModel.getCurrentCityName()
         cityLabel.textColor = .systemBlue
         cityLabel.font = UIFont(name: "AmericanTypewriter-Bold", size: 32)
         cityLabel.adjustsFontSizeToFitWidth = true
@@ -63,6 +63,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         let weatherDescriptionLabel = UILabel()
         weatherDescriptionLabel.text = viewModel.getCurrentWeather().weather.first?.description
         weatherDescriptionLabel.font = UIFont(name: "AmericanTypewriter-Bold", size: 22)
+        weatherDescriptionLabel.adjustsFontSizeToFitWidth = true
         return weatherDescriptionLabel
     }()
     
@@ -113,7 +114,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupVIews()
         setupLayout()
         
@@ -262,20 +263,19 @@ extension MainViewController {
     
     func bindViewModel() {
         viewModel.pickedCity.bind(listener: { (currentCityName) in
-            DispatchQueue.main.async {
+            
                 self.viewModel.setNewCurrentCity(citySctring: currentCityName)
                 
                 let currentCity = self.viewModel.defaultsManager.getCurrentCity()
                 self.viewModel.updateWeatherInfo(city: currentCity)
                 
-                self.cityLabel.text = currentCity.name
+                self.cityLabel.text = self.viewModel.getCurrentCityName()
                 self.tempLabel.text = Int(self.viewModel.getCurrentWeather().main.temp).description + "°"
                 self.viewModel.setImageIntoView(imageView: self.weatherImageView, imageName: self.viewModel.defaultsManager.getCurrentWeatherData().weather.first?.icon)
                 self.weatherDescriptionLabel.text = self.viewModel.getCurrentWeather().weather.first?.description
                 
                 self.dayForecatCollectionView.reloadData()
-                
-            }
+            
         })
     }
 }

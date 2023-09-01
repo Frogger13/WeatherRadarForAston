@@ -14,6 +14,7 @@ class DefaultsManager {
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
     
+    //MARK: - Cicties array get/set
     func setCitiesArray(citiesArray: [CityModel]) {
         var dataCitiesArray: [Data] = []
         
@@ -36,6 +37,7 @@ class DefaultsManager {
         return citiesArray
     }
     
+    //MARK: - Current city get/set
     func setCurrentCity(cityString: String) {
         var currentCity = CityModel()
         let citiesArray = getCitiesArray()
@@ -58,6 +60,7 @@ class DefaultsManager {
         return CitiesEnum.moskow
     }
     
+    //MARK: - CurrentWeatherData get/set
     func setCurrentWeatherData(currentWeatherOfferData: Data) {
             defautls.set(currentWeatherOfferData, forKey: DefaultsKeys.currentWeatherOffer)
     }
@@ -71,11 +74,12 @@ class DefaultsManager {
         return CurrentWeatherOfferModel()
     }
     
-    func setForecastWeather(forecastWeatherData: Data) {
+    //MARK: - ForecastWeather get/set
+    func setForecatWeather(forecastWeatherData: Data) {
             defautls.set(forecastWeatherData, forKey: DefaultsKeys.forecastWeather)
     }
     
-    func getForecastWeather() -> FiveDaysOfferModel {
+    func getForecatWeather() -> FiveDaysOfferModel {
         if let forecastWeatherData = defautls.object(forKey: DefaultsKeys.forecastWeather) as? Data{
             if let decodedForecastWeather = try? decoder.decode(FiveDaysOfferModel.self, from: forecastWeatherData){
                 return decodedForecastWeather

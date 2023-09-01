@@ -21,30 +21,7 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let defaults = UserDefaults.standard
-        let isloggedIn = defaults.bool(forKey: "isLoggedIn")
-        if isloggedIn {
-            goToMainPage()
-        } else {
-            goToLoginPage()
-        }
-    }
-    
-    func goToLoginPage(){
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        let loginViewModel = LoginViewModel()
-        loginViewModel.appCoordinator = self
-        loginViewController.viewModel = loginViewModel
-        navigationController.pushViewController(loginViewController, animated: true)
-        
-    }
-    
-    func goToRegisterPage(){
-        let registerViewController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
-        let registerViewModel = RegisterViewModel()
-        registerViewModel.appCoordinator = self
-        registerViewController.viewModel = registerViewModel
-        navigationController.pushViewController(registerViewController, animated: true)
+        goToStartPage()
     }
     
     func goToMainPage(){
@@ -54,5 +31,23 @@ class AppCoordinator: Coordinator {
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func goToStartPage(){
+        let viewController = storyboard.instantiateViewController(withIdentifier: "StartViewController") as! StartViewController
+        let viewModel = StartViewModel()
+        viewModel.appCoordinator = self
+        viewController.viewModel = viewModel
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    
+    func goToChooseCitiesPage(){
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ChooseCitiesViewController") as! ChooseCitiesViewController
+        let viewModel = ChooseCitiesViewModel()
+        viewModel.appCoordinator = self
+        viewController.viewModel = viewModel
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
     
 }

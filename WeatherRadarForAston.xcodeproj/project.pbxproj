@@ -25,19 +25,20 @@
 		B7268FB92A9CCB2F00D8DE18 /* CustomForecatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FB82A9CCB2F00D8DE18 /* CustomForecatViewCell.swift */; };
 		B7268FDB2A9CD28600D8DE18 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FDA2A9CD28600D8DE18 /* AppConstants.swift */; };
 		B7268FE32A9F4EF600D8DE18 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FE22A9F4EF600D8DE18 /* DefaultsManager.swift */; };
+		B7268FEA2AA2084C00D8DE18 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FE92AA2084C00D8DE18 /* StartViewController.swift */; };
+		B7268FEC2AA208BF00D8DE18 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FEB2AA208BF00D8DE18 /* StartViewModel.swift */; };
+		B7268FEE2AA20FD100D8DE18 /* StartViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FED2AA20FD100D8DE18 /* StartViewConstraints.swift */; };
+		B7268FF02AA210D000D8DE18 /* ChooseCitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FEF2AA210D000D8DE18 /* ChooseCitiesViewController.swift */; };
+		B7268FF22AA210F900D8DE18 /* ChooseCitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7268FF12AA210F900D8DE18 /* ChooseCitiesViewModel.swift */; };
 		B7B622FB2A98E9A10036E44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FA2A98E9A10036E44B /* AppDelegate.swift */; };
-		B7B622FF2A98E9A10036E44B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B622FE2A98E9A10036E44B /* LoginViewController.swift */; };
 		B7B623022A98E9A10036E44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B623002A98E9A10036E44B /* Main.storyboard */; };
 		B7B623042A98E9A30036E44B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B623032A98E9A30036E44B /* Assets.xcassets */; };
 		B7B623072A98E9A30036E44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B623052A98E9A30036E44B /* LaunchScreen.storyboard */; };
 		B7B623172A98F7D70036E44B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623162A98F7D70036E44B /* User.swift */; };
-		B7B623192A98F8600036E44B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623182A98F8600036E44B /* LoginViewModel.swift */; };
 		B7B6231C2A98F9100036E44B /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6231B2A98F9100036E44B /* Dynamic.swift */; };
 		B7B623212A9A11410036E44B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623202A9A11410036E44B /* Coordinator.swift */; };
 		B7B623232A9A11DC0036E44B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623222A9A11DC0036E44B /* AppCoordinator.swift */; };
 		B7B623262A9A13300036E44B /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623252A9A13300036E44B /* Storyboardable.swift */; };
-		B7B623282A9A29F80036E44B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623272A9A29F80036E44B /* RegisterViewModel.swift */; };
-		B7B6232A2A9A2A3B0036E44B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B623292A9A2A3B0036E44B /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,21 +61,22 @@
 		B7268FB82A9CCB2F00D8DE18 /* CustomForecatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomForecatViewCell.swift; sourceTree = "<group>"; };
 		B7268FDA2A9CD28600D8DE18 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		B7268FE22A9F4EF600D8DE18 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
+		B7268FE92AA2084C00D8DE18 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B7268FEB2AA208BF00D8DE18 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		B7268FED2AA20FD100D8DE18 /* StartViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewConstraints.swift; sourceTree = "<group>"; };
+		B7268FEF2AA210D000D8DE18 /* ChooseCitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCitiesViewController.swift; sourceTree = "<group>"; };
+		B7268FF12AA210F900D8DE18 /* ChooseCitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCitiesViewModel.swift; sourceTree = "<group>"; };
 		B7B622F72A98E9A10036E44B /* WeatherRadarForAston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherRadarForAston.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B622FA2A98E9A10036E44B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7B622FE2A98E9A10036E44B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B7B623012A98E9A10036E44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7B623032A98E9A30036E44B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7B623062A98E9A30036E44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7B623082A98E9A30036E44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7B623162A98F7D70036E44B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B7B623182A98F8600036E44B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B7B6231B2A98F9100036E44B /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		B7B623202A9A11410036E44B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B7B623222A9A11DC0036E44B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B7B623252A9A13300036E44B /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
-		B7B623272A9A29F80036E44B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		B7B623292A9A2A3B0036E44B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BA4A3B42BEA21ECD69BBC07C /* Pods_WeatherRadarForAston.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherRadarForAston.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B7268FB32A9CAAEC00D8DE18 /* MainViewConstraints.swift */,
+				B7268FED2AA20FD100D8DE18 /* StartViewConstraints.swift */,
 				B7268FDA2A9CD28600D8DE18 /* AppConstants.swift */,
 			);
 			path = Constants;
@@ -200,9 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				B7B6231A2A98F8FC0036E44B /* Bindings */,
-				B7B623182A98F8600036E44B /* LoginViewModel.swift */,
-				B7B623272A9A29F80036E44B /* RegisterViewModel.swift */,
 				B7268F692A9A3A7C00D8DE18 /* MainViewModel.swift */,
+				B7268FEB2AA208BF00D8DE18 /* StartViewModel.swift */,
+				B7268FF12AA210F900D8DE18 /* ChooseCitiesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -258,9 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				B7268FB72A9CCAF700D8DE18 /* CustomXibVC */,
-				B7B622FE2A98E9A10036E44B /* LoginViewController.swift */,
-				B7B623292A9A2A3B0036E44B /* RegisterViewController.swift */,
 				B7268F672A9A39A100D8DE18 /* MainViewController.swift */,
+				B7268FE92AA2084C00D8DE18 /* StartViewController.swift */,
+				B7268FEF2AA210D000D8DE18 /* ChooseCitiesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -415,10 +418,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7B622FF2A98E9A10036E44B /* LoginViewController.swift in Sources */,
-				B7B6232A2A9A2A3B0036E44B /* RegisterViewController.swift in Sources */,
+				B7268FF02AA210D000D8DE18 /* ChooseCitiesViewController.swift in Sources */,
 				B7268FA62A9BC79800D8DE18 /* ForecatModel.swift in Sources */,
+				B7268FEC2AA208BF00D8DE18 /* StartViewModel.swift in Sources */,
 				B7B622FB2A98E9A10036E44B /* AppDelegate.swift in Sources */,
+				B7268FF22AA210F900D8DE18 /* ChooseCitiesViewModel.swift in Sources */,
+				B7268FEA2AA2084C00D8DE18 /* StartViewController.swift in Sources */,
 				B7268FB92A9CCB2F00D8DE18 /* CustomForecatViewCell.swift in Sources */,
 				B7268FAE2A9BED1000D8DE18 /* Coordinate.swift in Sources */,
 				B7268FE32A9F4EF600D8DE18 /* DefaultsManager.swift in Sources */,
@@ -430,9 +435,8 @@
 				B7B623262A9A13300036E44B /* Storyboardable.swift in Sources */,
 				B7B623172A98F7D70036E44B /* User.swift in Sources */,
 				B7268FB42A9CAAEC00D8DE18 /* MainViewConstraints.swift in Sources */,
+				B7268FEE2AA20FD100D8DE18 /* StartViewConstraints.swift in Sources */,
 				B7268FAC2A9BECE000D8DE18 /* CitiesEnum.swift in Sources */,
-				B7B623192A98F8600036E44B /* LoginViewModel.swift in Sources */,
-				B7B623282A9A29F80036E44B /* RegisterViewModel.swift in Sources */,
 				B7268F962A9B5C1400D8DE18 /* DefaultsKeys.swift in Sources */,
 				B7268F982A9B62A200D8DE18 /* LocationServise.swift in Sources */,
 				B7268F6A2A9A3A7C00D8DE18 /* MainViewModel.swift in Sources */,
