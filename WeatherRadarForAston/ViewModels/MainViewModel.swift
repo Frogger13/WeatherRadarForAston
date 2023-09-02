@@ -44,17 +44,20 @@ class MainViewModel {
     }
     
     func setImageIntoView(imageView: UIImageView, imageName: String?) {
-        let url = URL(string: "https://openweathermap.org/img/wn/\(imageName ?? "")@2x.png")
-        let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
-        imageView.kf.setImage(
-            with: url,
-            placeholder: UIImage(named: "placeholderImage"),
-            options: [
-                .processor(processor),
-                .scaleFactor(UIScreen.main.scale),
-                .cacheOriginalImage
-            ])
-        
+        DispatchQueue.global(qos: .utility).async {
+            let url = URL(string: "https://openweathermap.org/img/wn/\(imageName ?? "")@2x.png")
+            DispatchQueue.main.async {
+                let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
+                imageView.kf.setImage(
+                    with: url,
+                    placeholder: UIImage(named: "placeholderImage"),
+                    options: [
+                        .processor(processor),
+                        .scaleFactor(UIScreen.main.scale),
+                        .cacheOriginalImage
+                    ])
+            }
+        }
     }
     
     func getForecat(row: Int) ->  ForecastModel{
