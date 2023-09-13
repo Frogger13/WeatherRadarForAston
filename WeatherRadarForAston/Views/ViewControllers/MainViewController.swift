@@ -35,7 +35,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     private lazy var cityLabel: UILabel = {
         let cityLabel = UILabel()
         cityLabel.text = viewModel.getCurrentCityName()
-        cityLabel.textColor = .systemBlue
+        cityLabel.textColor = .white
         cityLabel.font = UIFont(name: "AmericanTypewriter-Bold", size: 32)
         cityLabel.adjustsFontSizeToFitWidth = true
         cityLabel.textAlignment = .center
@@ -263,7 +263,6 @@ extension MainViewController {
     
     func bindViewModel() {
         viewModel.pickedCity.bind(listener: { (currentCityName) in
-            
                 self.viewModel.setNewCurrentCity(citySctring: currentCityName)
                 
                 let currentCity = self.viewModel.defaultsManager.getCurrentCity()
@@ -275,7 +274,6 @@ extension MainViewController {
                 self.weatherDescriptionLabel.text = self.viewModel.getCurrentWeather().weather.first?.description
                 
                 self.dayForecatCollectionView.reloadData()
-            
         })
     }
 }
